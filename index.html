@@ -113,10 +113,19 @@
   }
 </style>
 </head>
+<script>
+  function goEnter() {
+    document.body.style.transition = "opacity 0.45s ease";
+    document.body.style.opacity = "0";
+    setTimeout(function () {
+      window.location.href = "enter.html";
+    }, 450);
+  }
+</script>  
 <body onclick="window.location.href='enter.html'" style="cursor:pointer;">
   <div class="brand">Prognostyx</div>
 
-  <div class="container">
+  <div class="container" onmouseenter="this.style.opacity='1'" onmouseleave="this.style.opacity='0.92'" style="opacity:0.92; transition:opacity 0.35s ease;">
     <p>
       A new layer is forming.<br><br>
       Not records. Not workflows.<br><br>
